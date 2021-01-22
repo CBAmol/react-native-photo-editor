@@ -28,5 +28,8 @@
     <string name="choose_from_camera">Choose From Camera</string>
     <string name="undo">Undo</string>
     <string name="erase">Erase</string>
+    <string name="crop">Crop/Rotate</string>
+    <string name="draw">Draw</string>
+    <string name="annotate">Annotate</string>
 
 </resources>

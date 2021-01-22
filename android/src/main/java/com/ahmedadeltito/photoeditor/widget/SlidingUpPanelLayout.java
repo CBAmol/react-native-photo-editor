@@ -44,7 +44,7 @@ public class SlidingUpPanelLayout extends ViewGroup {
     /**
      * Default initial state for the component
      */
-    private static PanelState DEFAULT_SLIDE_STATE = PanelState.COLLAPSED;
+    private static final PanelState DEFAULT_SLIDE_STATE = PanelState.COLLAPSED;
 
     /**
      * Default height of the shadow above the peeking out panel
@@ -231,35 +231,35 @@ public class SlidingUpPanelLayout extends ViewGroup {
          * @param panel       The child view that was moved
          * @param slideOffset The new offset of this sliding pane within its range, from 0-1
          */
-        public void onPanelSlide(View panel, float slideOffset);
+        void onPanelSlide(View panel, float slideOffset);
 
         /**
          * Called when a sliding panel becomes slid completely collapsed.
          *
          * @param panel The child view that was slid to an collapsed position
          */
-        public void onPanelCollapsed(View panel);
+        void onPanelCollapsed(View panel);
 
         /**
          * Called when a sliding panel becomes slid completely expanded.
          *
          * @param panel The child view that was slid to a expanded position
          */
-        public void onPanelExpanded(View panel);
+        void onPanelExpanded(View panel);
 
         /**
          * Called when a sliding panel becomes anchored.
          *
          * @param panel The child view that was slid to a anchored position
          */
-        public void onPanelAnchored(View panel);
+        void onPanelAnchored(View panel);
 
         /**
          * Called when a sliding panel becomes completely hidden.
          *
          * @param panel The child view that was slid to a hidden position
          */
-        public void onPanelHidden(View panel);
+        void onPanelHidden(View panel);
     }
 
     /**
@@ -550,7 +550,6 @@ public class SlidingUpPanelLayout extends ViewGroup {
                     }
                 }
             });
-            ;
         }
     }
 

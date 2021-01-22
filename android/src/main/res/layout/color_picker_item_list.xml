@@ -1,15 +1,26 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:padding="6dp">
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:gravity="center"
+    >
 
     <View
         android:id="@+id/color_picker_view"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="6dp"
-        android:layout_marginBottom="6dp"
-        android:background="@color/white" />
+        android:background="@color/white"
+        android:layout_margin="5dp"
+        />
+
+    <ImageView
+        android:id="@+id/selectedColorImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:contentDescription="selectedColorImageView"
+        android:visibility="gone"
+        />
 
 </RelativeLayout>

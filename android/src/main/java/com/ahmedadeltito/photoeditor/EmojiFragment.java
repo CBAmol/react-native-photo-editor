@@ -39,7 +39,7 @@ public class EmojiFragment extends Fragment implements EmojiAdapter.OnEmojiClick
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main_photo_edit_emoji, container, false);
 
-        emojiRecyclerView = (RecyclerView) rootView.findViewById(R.id.fragment_main_photo_edit_emoji_rv);
+        emojiRecyclerView = rootView.findViewById(R.id.fragment_main_photo_edit_emoji_rv);
         emojiRecyclerView.setHasFixedSize(true);
         emojiRecyclerView.setLayoutManager(new GridLayoutManager(photoEditorActivity, 4));
         EmojiAdapter adapter = new EmojiAdapter(photoEditorActivity, emojiIds);

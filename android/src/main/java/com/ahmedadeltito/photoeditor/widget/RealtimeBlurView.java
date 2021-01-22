@@ -337,7 +337,7 @@ public class RealtimeBlurView extends View {
     private static class StopException extends RuntimeException {
     }
 
-    private static StopException STOP_EXCEPTION = new StopException();
+    private static final StopException STOP_EXCEPTION = new StopException();
 
     static {
         try {

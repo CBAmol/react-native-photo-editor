@@ -53,7 +53,7 @@ public class ImageFragment extends Fragment implements ImageAdapter.OnImageClick
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main_photo_edit_image, container, false);
 
-        imageRecyclerView = (RecyclerView) rootView.findViewById(R.id.fragment_main_photo_edit_image_rv);
+        imageRecyclerView = rootView.findViewById(R.id.fragment_main_photo_edit_image_rv);
         imageRecyclerView.setLayoutManager(new GridLayoutManager(photoEditorActivity, 3));
         ImageAdapter adapter = new ImageAdapter(photoEditorActivity, stickerBitmaps);
         adapter.setOnImageClickListener(this);

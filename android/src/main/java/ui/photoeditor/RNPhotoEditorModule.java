@@ -39,9 +39,7 @@ public class RNPhotoEditorModule extends ReactContextBaseJavaModule {
           } else {
             mDoneCallback.invoke(intent.getExtras().getString("imagePath"));
           }
-
         }
-
         mCancelCallback = null;
         mDoneCallback = null;
       }
@@ -50,12 +48,8 @@ public class RNPhotoEditorModule extends ReactContextBaseJavaModule {
 
   public RNPhotoEditorModule(ReactApplicationContext reactContext) {
     super(reactContext);
-
     reactContext.addActivityEventListener(mActivityEventListener);
-
   }
-
-
 
   @Override
   public String getName() {

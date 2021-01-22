@@ -19,9 +19,9 @@ import ui.photoeditor.R;
 public class EmojiAdapter extends RecyclerView.Adapter<EmojiAdapter.ViewHolder> {
 
 //    private Typeface emojiFont;
-    private Context context;
-    private List<String> emojiIds;
-    private LayoutInflater inflater;
+    private final Context context;
+    private final List<String> emojiIds;
+    private final LayoutInflater inflater;
     private OnEmojiClickListener onEmojiClickListener;
 
     public EmojiAdapter(@NonNull Context context, @NonNull List<String> emojiIds) {
@@ -73,7 +73,7 @@ public class EmojiAdapter extends RecyclerView.Adapter<EmojiAdapter.ViewHolder> 
 
         public ViewHolder(View itemView) {
             super(itemView);
-            emojiTextView = (TextView) itemView.findViewById(R.id.fragment_photo_edit_emoji_tv);
+            emojiTextView = itemView.findViewById(R.id.fragment_photo_edit_emoji_tv);
             emojiTextView.setTypeface(PhotoEditorActivity.emojiFont);
             emojiTextView.setOnClickListener(new View.OnClickListener() {
                 @Override

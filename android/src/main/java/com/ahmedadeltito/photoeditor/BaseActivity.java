@@ -251,7 +251,7 @@ public class BaseActivity extends AppCompatActivity {
                 final String id = DocumentsContract.getDocumentId(uri);
                 final Uri contentUri = ContentUris.withAppendedId(
                         Uri.parse("content://downloads/public_downloads"),
-                        Long.valueOf(id));
+                        Long.parseLong(id));
                 return GalleryUtils.getDataColumn(this, contentUri, null, null);
             }
             // MediaProvider

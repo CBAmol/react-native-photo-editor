@@ -31,18 +31,14 @@ public class UtilFunctions {
     public static boolean stringIsEmpty(String string) {
 
         if (string != null) {
-            if (!string.trim().equals("")) {
-                return false;
-            }
+            return string.trim().equals("");
         }
         return true;
     }
 
     public static boolean stringIsNotEmpty(String string) {
         if (string != null && !string.equals("null")) {
-            if (!string.trim().equals("")) {
-                return true;
-            }
+            return !string.trim().equals("");
         }
         return false;
     }

@@ -18,8 +18,8 @@ import ui.photoeditor.R;
 
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> {
 
-    private List<Bitmap> imageBitmaps;
-    private LayoutInflater inflater;
+    private final List<Bitmap> imageBitmaps;
+    private final LayoutInflater inflater;
     private OnImageClickListener onImageClickListener;
 
     public ImageAdapter(@NonNull Context context, @NonNull List<Bitmap> imageBitmaps) {
@@ -27,8 +27,9 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
         this.imageBitmaps = imageBitmaps;
     }
 
+    @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.fragment_photo_edit_image_item_list, parent, false);
         return new ViewHolder(view);
     }
@@ -52,7 +53,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
 
         public ViewHolder(View itemView) {
             super(itemView);
-            imageView = (ImageView) itemView.findViewById(R.id.fragment_photo_edit_image_iv);
+            imageView = itemView.findViewById(R.id.fragment_photo_edit_image_iv);
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
